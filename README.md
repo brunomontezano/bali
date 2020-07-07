@@ -106,11 +106,31 @@ sudo make clean install
 
 And it's done, you have st installed on your system.
 
-## We are almost done!
+## We are almost done! Let's make it even better!
 
 Now that we have our main applications installed, we have our terminal emulator (st), we have our dotfiles inside our installation, what more do we need?
 
-Well, it depends. But I (Bruno) still gonna use the script I have on ~/.config/i3/scripts. It's called autolayout.py, and what it does is make i3wm have a default layout (master&stack) that you would normally not have. That's a common feature on other window managers, like bspwm, dwm, xmonad, etc. So, in order to make it work, we'll have to install i3ipc and make the script executable. Let's go:
+Well, it depends.
+
+But I (Bruno) still gonna do some things.
+
+### Vim Plugins
+
+I will installl Vundle (Vim Plugin Manager) to be able to install my Vim plugins and use them with no problems.
+
+```sh
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+After that, I can just open vim on my terminal and type the command to install the plugins.
+
+```
+:PluginInstall
+```
+
+### Master&Stack layout on i3 window manager
+
+I'll use the script I have on ~/.config/i3/scripts. It's called autolayout.py, and what it does is make i3wm have a default layout (master&stack) that you would normally not have. That's a common feature on other window managers, like bspwm, dwm, xmonad, etc. So, in order to make it work, we'll have to install i3ipc and make the script executable. Let's go:
 
 ```sh
 sudo pacman -S python-pip
@@ -119,7 +139,9 @@ cd ~/.config/i3/scripts
 chmod +x autolayout.py
 ```
 
-Now that we have the script executable, and i3ipc installed via pip, kind of the python package manager, and we already have on my config this script autostarting when we start i3-gaps, it's pretty much done. Let's just go into our home folder and create a .xinitrc file to Xorg know what to do when we call it.
+### Create a .xinitrc
+
+Now that we have our vim plugins working, the layout script executable, and i3ipc installed via pip, kind of the python package manager, and we already have on my i3 configuration file this script autostarting when we start i3-gaps, it's pretty much done. Let's just go into our home folder and create a .xinitrc file to Xorg know what to do when we call it.
 
 ```sh
 cd ~
