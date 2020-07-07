@@ -34,7 +34,19 @@ Then, I'll edit the /etc/sudoers file with the vim text editor, and uncomment th
  # %wheel ALL=(ALL) ALL
 ```
 
-## Now, let's install i3-gaps
+### First, I'm going to install an AUR (Arch User Repository) Helper 
+
+For me to do it, I have to clone the yay package out of Arch Linux website and then make this package using the command makepkg. Let's do it:
+
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+Now I'm able to install some other packages that were not available in the official Arch Repository, like the font I use on my i3 setup, my bibliography manager, data analysis software, etc. 
+
+## Now, let's install i3-gaps and some other applications
 
 In order to install i3-gaps, I have to install Xorg and some other packages to i3 properly loads when it's time. The commands to change into the new "pepper" user and installing Xorg is going to be:
 
@@ -46,7 +58,9 @@ sudo pacman -S xorg-server xorg-xinit
 After Xorg installs, I'll install some packages that will make my i3 setup work when I finally get into it, they are the following:
 
 ```
-sudo pacman -S i3-gaps i3blocks i3lock i3status lxappearance rofi exa feh cmus pavucontrol alsa-utils arandr git elinks newsboat qutebrowser picom pulseaudio pulseaudio-alsa scrot redshift mpv sxiv youtube-dl zip unzip unrar zathura zathura-pdf-mupdf vifm udisks2 usbutils transmission-gtk ttf-liberation ttf-hack ttf-dejavu neovim man-db man-pages htop galculator exfat-utils dmenu dialog
+yay -S i3-gaps i3blocks i3lock i3status lxappearance rofi exa feh cmus pavucontrol alsa-utils arandr git elinks newsboat qutebrowser picom pulseaudio pulseaudio-alsa scrot redshift mpv sxiv youtube-dl zip unzip unrar zathura zathura-pdf-mupdf vifm udisks2 usbutils transmission-gtk ttf-liberation ttf-hack ttf-dejavu neovim man-db man-pages htop galculator exfat-utils dmenu dialog imagemagick nmap wget nerd-fonts-mononoki ttf-font-awesome ttf-joypixels ttf-ms-fonts ttf-bitstream-vera deadbeef arch-wiki-docs arch-wiki-lite shell-color-scripts
 ```
 
 Some of these packages are not actually necessary for you to have a working system. A lot of them are just applications that I like to use and I find myself having a good time with them.
+
+### Now that I have the applications, I need to grab my configurations
