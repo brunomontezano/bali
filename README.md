@@ -7,11 +7,11 @@ This guide was made by me (Bruno Montezano) to help myself when doing a fresh in
 
 ## What do I need to do right after installing?
 
-First thing I'm going to do is update the system and then, installing the sudo package if it's not already installed:
+First thing I'm going to do is update the system and then, installing the sudo and vim package if it's not already installed:
 
 ```
 pacman -Syu
-pacman -S sudo
+pacman -S sudo vim
 ```
 
 ### Create a new user and let it use sudo
@@ -42,3 +42,11 @@ In order to install i3-gaps, I have to install Xorg and some other packages to i
 su pepper
 sudo pacman -S xorg-server xorg-xinit
 ```
+
+After Xorg installs, I'll install some packages that will make my i3 setup work when I finally get into it, they are the following:
+
+```
+sudo pacman -S i3-gaps i3blocks i3lock i3status lxappearance rofi exa feh cmus pavucontrol alsa-utils arandr git elinks newsboat qutebrowser picom pulseaudio pulseaudio-alsa scrot redshift mpv sxiv youtube-dl zip unzip unrar zathura zathura-pdf-mupdf vifm udisks2 usbutils transmission-gtk ttf-liberation ttf-hack ttf-dejavu neovim man-db man-pages htop galculator exfat-utils dmenu dialog
+```
+
+Some of these packages are not actually necessary for you to have a working system. A lot of them are just applications that I like to use and I find myself having a good time with them.
