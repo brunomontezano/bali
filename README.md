@@ -7,11 +7,11 @@ This guide was made by me (Bruno Montezano) to help myself when doing a fresh in
 
 ## What do I need to do right after installing?
 
-First thing I'm going to do is update the system and then, installing the sudo and vim package if it's not already installed:
+First thing I'm going to do is update the system and then, installing the sudo, vim and git package if it's not already installed:
 
 ```sh
 pacman -Syu
-pacman -S sudo vim
+pacman -S sudo vim git
 ```
 
 ### Create a new user and let it use sudo
@@ -58,7 +58,7 @@ sudo pacman -S xorg-server xorg-xinit
 After Xorg installs, I'll install some packages that will make my i3 setup work when I finally get into it, they are the following:
 
 ```sh
-yay -S i3-gaps i3blocks i3lock i3status lxappearance rofi exa feh cmus pavucontrol alsa-utils arandr git elinks newsboat qutebrowser picom pulseaudio pulseaudio-alsa scrot redshift mpv sxiv youtube-dl zip unzip unrar zathura zathura-pdf-mupdf vifm udisks2 usbutils transmission-gtk ttf-liberation ttf-hack ttf-dejavu neovim man-db man-pages htop galculator exfat-utils dmenu dialog imagemagick nmap wget nerd-fonts-mononoki ttf-font-awesome ttf-joypixels ttf-ms-fonts ttf-bitstream-vera deadbeef arch-wiki-docs arch-wiki-lite shell-color-scripts nano
+yay -S i3-gaps i3blocks i3lock i3status lxappearance rofi exa feh cmus pavucontrol alsa-utils arandr elinks newsboat qutebrowser picom pulseaudio pulseaudio-alsa scrot redshift mpv sxiv youtube-dl zip unzip unrar zathura zathura-pdf-mupdf vifm udisks2 usbutils transmission-gtk ttf-liberation ttf-hack ttf-dejavu neovim man-db man-pages htop galculator exfat-utils dmenu dialog imagemagick nmap wget nerd-fonts-mononoki ttf-font-awesome ttf-joypixels ttf-ms-fonts ttf-bitstream-vera deadbeef arch-wiki-docs arch-wiki-lite shell-color-scripts nano
 ```
 
 Some of these packages are not actually necessary for you to have a working system. A lot of them are just applications that I like to use and I find myself having a good time with them.
