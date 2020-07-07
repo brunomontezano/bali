@@ -98,4 +98,52 @@ vim config.h
  unsigned int alpha = 0xee;
  ```
  
- You are going to change the value to 0xff like it says on DT's file documentation.
+ You are going to change the value to 0xff like it says on DT's file documentation. And then you can save the file, and still inside "st-distrotube" directory, you can compile st:
+ 
+```sh
+sudo make clean install
+```
+
+And it's done, you have st installed on your system.
+
+## We are almost done!
+
+Now that we have our main applications installed, we have our terminal emulator (st), we have our dotfiles inside our installation, what more do we need?
+
+Well, it depends. But I (Bruno) still gonna use the script I have on ~/.config/i3/scripts. It's called autolayout.py, and what it does is make i3wm have a default layout (master&stack) that you would normally not have. That's a common feature on other window managers, like bspwm, dwm, xmonad, etc. So, in order to make it work, we'll have to install i3ipc and make the script executable. Let's go:
+
+```sh
+sudo pacman -S python-pip
+pip install i3ipc
+cd ~/.config/i3/scripts
+chmod +x autolayout.py
+```
+
+Now that we have the script executable, and i3ipc installed via pip, kind of the python package manager, and we already have on my config this script autostarting when we start i3-gaps, it's pretty much done. Let's just go into our home folder and create a .xinitrc file to Xorg know what to do when we call it.
+
+```sh
+cd ~
+vim .xinitrc
+```
+
+And then inside this file you're going to put the following
+
+```
+exec i3
+```
+
+Then you can save it and relax.
+
+## Will it work?
+
+Probably. I would recommend you to reboot your system after all this, and then, to log in into your i3 setup, you can just type into your tty the Xorg command to initialize your graphic interface.
+
+```
+startx
+```
+
+And then, hopefully you'll be on your new system, probably without any wallpaper, that you can set putting a "wallpaper.jpg" file into the ~/img/ directory and then rebooting the system.
+
+If it helped you, star the repository and give a feedback!
+
+Have a great day!
