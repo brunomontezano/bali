@@ -1,4 +1,4 @@
-# Bruno's Arch Linux Instructions
+# BALI - Bruno's Arch Linux Instructions
 
 
 ![Screenshot2020-07-0715:04:58](https://user-images.githubusercontent.com/65104127/86823544-5515aa80-c063-11ea-9b8a-c6c868611ed7.png)
