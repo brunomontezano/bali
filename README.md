@@ -166,6 +166,10 @@ startx
 
 And then, hopefully you'll be on your new system, probably without any wallpaper, that you can set putting a "wallpaper.jpg" file into the ~/img/ directory and then rebooting the system.
 
+## Final Notes
+
 If it helped you, star the repository and give a feedback!
+
+I'll leave a .txt file that contains a list of the current packages I have installed in my Arch build, so you can check it out and maybe find some new programs to use.
 
 Have a great day!
